@@ -1,0 +1,27 @@
+name: monorepo
+
+packages:
+  - packages/**
+
+scripts:
+  generate:build:
+    run: |
+      dart run build_runner build --delete-conflicting-outputs
+    selectPackages:
+      dependsOn: build_runner
+
+#  generate:watch:
+#    run: |
+#      dart run build_runner watch --delete-conflicting-outputs
+#    selectPackages:
+#      dependsOn: build_runner
+
+  generate:
+    run: |
+      melos run generate:build
+      dart format .
+
+  bootstrap:
+    run: |
+      melos bootstrap
+      melos run generate:build
