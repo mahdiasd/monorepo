@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:network/src/dto/response/paging_meta_response.dart';
 
-part 'base_response.g.dart';
+part 'network_response.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
 class NetworkResponse<T> {
