@@ -22,8 +22,9 @@ abstract class ApiCaller {
 
       final networkResponse = response.data;
       if (networkResponse == null || networkResponse.data == null) {
-        return Result.error(const HttpException(
-            code: 400, message: 'Response format malformed!'),);
+        return Result.error(
+          const HttpException(code: 400, message: 'Response format malformed!'),
+        );
       }
 
       if (networkResponse.status != 'success') {
@@ -36,7 +37,6 @@ abstract class ApiCaller {
       }
 
       return Result.ok(networkResponse.data as T);
-
     } on DioException catch (e) {
       return Result.error(_handleDioError(e));
     } catch (e) {

@@ -12,6 +12,7 @@ class NetworkException extends AppException {
 class HttpException extends AppException {
   const HttpException({super.message, super.code});
 }
+
 class UnknownException extends AppException {
   const UnknownException({super.message, super.code});
 }

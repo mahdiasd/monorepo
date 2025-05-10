@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: utils,base_dependencies
+dependency_overrides:
+  utils:
+    path: ..\\utils
+  base_dependencies:
+    path: ..\\shared_dependency\\base_dependencies

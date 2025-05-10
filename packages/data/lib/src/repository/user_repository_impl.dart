@@ -12,18 +12,16 @@ class UserRepositoryImpl extends UserRepository {
   @override
   Future<Result<User>> login(String username, String password) async {
     final result = await ApiCaller.safeApiCall<LoginResponse>(
-          () => _userApiService.login(username, password),
+      () => _userApiService.login(username, password),
     );
 
-    switch(result)
-    {
+    switch (result) {
       case Ok<LoginResponse>():
         return Result.ok(_mapToUser(result.value));
       case Error<LoginResponse>():
         return Result.error(result.error);
     }
   }
-
 
   User _mapToUser(LoginResponse loginResponse) {
     return User(
