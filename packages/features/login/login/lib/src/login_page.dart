@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login/src/login_bloc.dart';
-import 'package:get_it/get_it.dart';
 import 'package:login/src/login_event.dart';
+import 'package:utils/utils.dart';
 
 import 'login_state.dart';
-
-final getIt = GetIt.instance;
-
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -18,7 +15,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<LoginBloc>(
-      create: (_) => getIt<LoginBloc>(), // Use injectable's getIt
+      create: (_) => getIt<LoginBloc>(),
       child: Scaffold(
         appBar: AppBar(title: Text('Login')),
         body: BlocConsumer<LoginBloc, LoginState>(
