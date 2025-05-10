@@ -10,6 +10,9 @@ dependencies:
   login:
     path: packages/features/login/login
 
+  utils:
+    path: packages/core/utils
+
   bloc: ^8.1.4
   flutter:
     sdk: flutter

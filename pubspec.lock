@@ -786,7 +786,7 @@ packages:
     source: path
     version: "0.1.0+1"
   utils:
-    dependency: transitive
+    dependency: "direct main"
     description:
       path: "packages/core/utils"
       relative: true

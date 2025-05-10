@@ -6,4 +6,4 @@ import 'package:utils/src/di/injection.config.dart';
 final getIt = GetIt.instance;
 
 @InjectableInit()
-void configureLoginDependencies() => getIt.init();
+void configureDependencies() => getIt.init();
