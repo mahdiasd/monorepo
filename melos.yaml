@@ -26,9 +26,9 @@ scripts:
       melos bootstrap
       melos run generate:build
 
-  add_flutter_dev_deps:
-    run: |
-      melos exec -- \
-        "flutter pub add bloc_test:^9.1.7 mocktail:^1.0.4 very_good_analysis:^6.0.0 --dev && \
-         flutter pub add flutter_test --dev " \
-    description: "Add common dev dependencies to all Flutter packages"
+#  add_flutter_dev_deps:
+#    run: |
+#      melos exec -- \
+#        "flutter pub add bloc_test:^9.1.7 mocktail:^1.0.4 very_good_analysis:^6.0.0 --dev && \
+#         flutter pub add flutter_test --dev " \
+#    description: "Add common dev dependencies to all Flutter packages"

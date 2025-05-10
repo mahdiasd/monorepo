@@ -2,3 +2,4 @@
 library;
 
 export 'src/login.dart';
+export 'src/login_page.dart';

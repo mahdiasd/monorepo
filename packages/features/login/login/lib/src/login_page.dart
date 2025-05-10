@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login/src/login_bloc.dart';
+import 'package:get_it/get_it.dart';
+import 'package:login/src/login_event.dart';
+
+import 'login_state.dart';
 
 final getIt = GetIt.instance;
 
@@ -22,7 +26,7 @@ class LoginPage extends StatelessWidget {
             if (state.user != null) {
               // Login successful
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Welcome, ${state.user!.name}!')),
+                SnackBar(content: Text('Welcome, ${state.user!.firstName}!')),
               );
               // Navigate or perform other actions here
             }
@@ -33,19 +37,6 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TextField(
-                    controller: _usernameController,
-                    decoration: InputDecoration(labelText: 'Username'),
-                    onChanged: (value) => context.read<LoginBloc>().add(UsernameChanged(value)),
-                  ),
-                  SizedBox(height: 16),
-                  TextField(
-                    controller: _passwordController,
-                    decoration: InputDecoration(labelText: 'Password'),
-                    obscureText: true,
-                    onChanged: (value) => context.read<LoginBloc>().add(PasswordChanged(value)),
-                  ),
-                  SizedBox(height: 32),
                   state.isLoading
                       ? CircularProgressIndicator()
                       : ElevatedButton(
