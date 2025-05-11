@@ -1,10 +1,10 @@
-# melos_managed_dependency_overrides: ui_dependencies,base_dependencies,domain,utils
+# melos_managed_dependency_overrides: base_dependencies,domain,ui_dependencies,utils
 dependency_overrides:
-  ui_dependencies:
-    path: ..\\..\\..\\core\\shared_dependency\\ui_dependencies
   base_dependencies:
     path: ..\\..\\..\\core\\shared_dependency\\base_dependencies
   domain:
     path: ..\\..\\..\\domain
+  ui_dependencies:
+    path: ..\\..\\..\\core\\shared_dependency\\ui_dependencies
   utils:
     path: ..\\..\\..\\core\\utils
