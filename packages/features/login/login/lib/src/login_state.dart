@@ -6,19 +6,24 @@ class LoginState {
   final bool isLoading;
   final User? user;
 
-  const LoginState({
-    this.username = '',
-    this.password = '',
-    this.isLoading = false,
-    this.user = null,
-  });
+  LoginState(
+      {this.username = "",
+      this.password = "",
+      this.isLoading = false,
+      this.user = null});
 
-  LoginState copyWith(
-      {String? username, String? password, bool? isLoading, User? user}) {
+
+  LoginState copyWith({
+    String? username,
+    String? password,
+    bool? isLoading,
+    User? user,
+  }) {
     return LoginState(
-        username: username ?? this.username,
-        password: password ?? this.password,
-        isLoading: isLoading ?? this.isLoading,
-        user: user ?? this.user);
+      username: username ?? this.username,
+      password: password ?? this.password,
+      isLoading: isLoading ?? this.isLoading,
+      user: user ?? this.user,
+    );
   }
 }

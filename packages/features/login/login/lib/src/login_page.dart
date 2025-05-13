@@ -8,19 +8,23 @@ import 'package:utils/utils.dart';
 import 'login_state.dart';
 
 class LoginPage extends StatelessWidget {
-  LoginPage({Key? key}) : super(key: key);
-
-  // final _usernameController = TextEditingController();
-  // final _passwordController = TextEditingController();
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<LoginBloc>(
+    return BlocProvider(
       create: (_) => getIt<LoginBloc>(),
-      child: Scaffold(
-        appBar: AppBar(title: Text('Login')),
-        body: Text(context.l10n.counterAppBarTitle),
-      ),
+      child: const LoginContent(),
     );
+  }
+}
+
+
+class LoginContent extends StatelessWidget {
+  const LoginContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
