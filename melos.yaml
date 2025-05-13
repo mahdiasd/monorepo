@@ -4,31 +4,38 @@ packages:
   - packages/**
 
 scripts:
+  generate:l10n:
+    run: flutter gen-l10n
+    description: Generate localizations
+
   generate:build:
     run: |
       dart run build_runner build --delete-conflicting-outputs
     selectPackages:
       dependsOn: build_runner
 
-#  generate:watch:
-#    run: |
-#      dart run build_runner watch --delete-conflicting-outputs
-#    selectPackages:
-#      dependsOn: build_runner
+  #  generate:watch:\
+  #    run: |\
+  #      dart run build_runner watch --delete-conflicting-outputs\
+  #    selectPackages:\
+  #      dependsOn: build_runner\
 
   generate:
     run: |
       melos run generate:build
+      melos run generate:l10n # Add this line to run localization generation
       dart format .
 
   bootstrap:
     run: |
       melos bootstrap
       melos run generate:build
+      melos run generate:l10n # Add this line to run localization generation
 
-#  add_flutter_dev_deps:
-#    run: |
-#      melos exec -- \
-#        "flutter pub add bloc_test:^9.1.7 mocktail:^1.0.4 very_good_analysis:^6.0.0 --dev && \
-#         flutter pub add flutter_test --dev " \
-#    description: "Add common dev dependencies to all Flutter packages"
+
+#  add_flutter_dev_deps:\
+#    run: |\
+#      melos exec -- \\\
+#        \"flutter pub add bloc_test:^9.1.7 mocktail:^1.0.4 very_good_analysis:^6.0.0 --dev && \\\
+#         flutter pub add flutter_test --dev \" \\\
+#    description: \"Add common dev dependencies to all Flutter packages\"\

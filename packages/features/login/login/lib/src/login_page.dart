@@ -9,8 +9,8 @@ import 'login_state.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
 
-  final _usernameController = TextEditingController();
-  final _passwordController = TextEditingController();
+  // final _usernameController = TextEditingController();
+  // final _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
       create: (_) => getIt<LoginBloc>(),
       child: Scaffold(
         appBar: AppBar(title: Text('Login')),
-        body: Text("data"),
+        body: Text(AppLocalizations.of(context).counterAppBarTitle),
       ),
     );
   }

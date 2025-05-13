@@ -19,6 +19,6 @@ class LoginState {
         username: username ?? this.username,
         password: password ?? this.password,
         isLoading: isLoading ?? this.isLoading,
-        user: user ?? user);
+        user: user ?? this.user);
   }
 }

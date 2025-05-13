@@ -17,6 +17,7 @@ dependencies:
   utils:
     path: ../../../core/utils
 
+
 dev_dependencies:
   bloc_test: 9.1.7
   flutter_test:
@@ -25,3 +26,7 @@ dev_dependencies:
   very_good_analysis: 6.0.0
   build_runner: ^2.1.0
   injectable_generator: ^2.7.0
+
+flutter:
+  uses-material-design: true
+  generate: true
