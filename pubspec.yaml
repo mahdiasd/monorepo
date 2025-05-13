@@ -13,6 +13,9 @@ dependencies:
   utils:
     path: packages/core/utils
 
+  ui:
+    path: packages/core/ui
+
   bloc: ^8.1.4
 
   flutter:

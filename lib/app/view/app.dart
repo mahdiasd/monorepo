@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login/login.dart';
-import '../../../packages/core/ui/lib/src/l10n/l10n.dart';
+import 'package:ui/l10n/arb/app_localizations.dart';
+import 'package:ui/l10n/l10n.dart';
 
 class App extends StatelessWidget {
 
@@ -15,8 +16,8 @@ class App extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      title: "AppLocalizations.of(context).counterAppBarTitle",
       home: LoginPage(),
     );
   }
