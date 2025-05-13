@@ -4,13 +4,13 @@ class LoginState {
   final String username;
   final String password;
   final bool isLoading;
-  final User? user = null;
+  final User? user;
 
   const LoginState({
     this.username = '',
     this.password = '',
     this.isLoading = false,
-    User? user = null,
+    this.user = null,
   });
 
   LoginState copyWith(
