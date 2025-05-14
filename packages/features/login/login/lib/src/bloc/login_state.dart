@@ -12,7 +12,6 @@ class LoginState {
       this.isLoading = false,
       this.user = null});
 
-
   LoginState copyWith({
     String? username,
     String? password,

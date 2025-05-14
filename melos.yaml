@@ -20,8 +20,8 @@ scripts:
   generate:build:
     run: |
       dart run build_runner build --delete-conflicting-outputs
-    selectPackages:
-      dependsOn: build_runner
+#    selectPackages:
+#      dependsOn: build_runner
     description: >
       Run code generation for packages that depend on build_runner, 
       deleting conflicting outputs if they exist.

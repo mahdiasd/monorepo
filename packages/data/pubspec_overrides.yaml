@@ -1,7 +1,5 @@
-# melos_managed_dependency_overrides: base_dependencies,domain,network,utils
+# melos_managed_dependency_overrides: domain,network,utils
 dependency_overrides:
-  base_dependencies:
-    path: ..\\core\\shared_dependency\\base_dependencies
   domain:
     path: ..\\domain
   network:

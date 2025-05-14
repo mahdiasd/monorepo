@@ -16,33 +16,34 @@ dependencies:
   ui:
     path: packages/core/ui
 
-  bloc: ^8.1.4
-
   flutter:
     sdk: flutter
-
   flutter_bloc: ^8.1.6
-
   flutter_localizations:
     sdk: flutter
 
+  bloc: ^8.1.4
   intl: ^0.19.0
-
   get_it: ^8.0.3
   injectable: ^2.5.0
   yaml: ^3.1.2
   yaml_edit: ^2.2.0
+  melos: ^6.3.2
 
 dev_dependencies:
-  bloc_test: ^9.1.7
+  bloc_test: 9.1.7
   flutter_test:
     sdk: flutter
-  melos: ^6.3.2
-  mocktail: ^1.0.4
-  very_good_analysis: ^6.0.0
-  build_runner: ^2.1.0
   injectable_generator: ^2.7.0
-
+  build_runner: ^2.4.15
+  flutter_lints: ^5.0.0
+  json_serializable: ^6.9.5
+  test: ^1.25.15
+  mocktail: ^1.0.4
+  very_good_analysis: 6.0.0
+  copy_with_extension_gen: ^6.0.0
+  build_verify: ^3.1.0
+  go_router_builder: ^2.9.0
 
 flutter:
   uses-material-design: true

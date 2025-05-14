@@ -33,14 +33,20 @@ Future<void> main() async {
 
     final editor = YamlEditor(content);
 
-    // If dev_dependencies exists, replace it. If not, create it.
     try {
       editor.update(['dev_dependencies'], devDependencies);
     } catch (_) {
       editor.appendToList([], {'dev_dependencies': devDependencies});
     }
 
-    await pubspecFile.writeAsString(editor.toString());
+    String result = editor.toString();
+
+    result = result.replaceAllMapped(
+        RegExp(r'(^|\n)(dev_dependencies:)'),
+            (match) => '${match.group(1)}\n${match.group(2)}'
+    );
+
+    await pubspecFile.writeAsString(result);
     print('✅ Synced dev_dependencies in $pubspecPath');
   }
 
