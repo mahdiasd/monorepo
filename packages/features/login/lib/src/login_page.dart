@@ -21,6 +21,11 @@ class LoginContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: const Column(
+        children: [Text("This is first text")],
+      ),
+    );
   }
 }

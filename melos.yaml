@@ -4,27 +4,31 @@ packages:
   - packages/**
 
 scripts:
+  generate:build:
+    run: |
+      dart run build_runner build --delete-conflicting-outputs
+    selectPackages:
+      dependsOn: build_runner
+    description: >
+      Run code generation for packages that depend on build_runner, 
+      deleting conflicting outputs if they exist.
+
   sync_dev_dependencies:
-    run: dart sync_dev_dependencies.dart
+    run: dart scripts/sync_dev_dependencies.dart
     description: >
       Synchronize dev_dependencies from dev_dependencies.yaml 
       into the dev_dependencies section of all pubspec.yaml files 
       across the repository to ensure consistent development dependencies.
+
+  sync_ui_dependencies:
+    run: dart scripts/sync_ui_dependencies.dart
+    description: "Add common dependencies to all feature packages"
 
   generate:l10n:
     run: flutter gen-l10n
     description: >
       Generate localization files using Flutter's localization tool
       to enable multi-language support throughout the app.
-
-  generate:build:
-    run: |
-      dart run build_runner build --delete-conflicting-outputs
-#    selectPackages:
-#      dependsOn: build_runner
-    description: >
-      Run code generation for packages that depend on build_runner, 
-      deleting conflicting outputs if they exist.
 
   generate:watch:
     run: |
@@ -34,22 +38,3 @@ scripts:
     description: >
       Continuously watch and rebuild code generation outputs for packages 
       using build_runner, ideal for development mode.
-
-  generate:
-    run: |
-      melos run generate:build
-      melos run generate:l10n
-      dart format .
-    description: >
-      Execute both code generation and localization generation for all packages, 
-      then format Dart code in the repository for consistency.
-
-  bootstrap:
-    run: |
-      melos bootstrap
-      melos run generate:build
-      melos run generate:l10n
-    description: >
-      Initialize the monorepo by bootstrapping package dependencies, 
-      running code generation, and generating localization files 
-      to prepare the workspace for development.
