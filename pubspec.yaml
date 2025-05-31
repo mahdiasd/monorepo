@@ -1,5 +1,5 @@
-name: monorepo
-description: Base project for modularity in flutter
+name: rose_physio
+description: Rose Physiotherapy Application
 version: 1.0.0+1
 publish_to: none
 
@@ -9,6 +9,15 @@ environment:
 dependencies:
   login:
     path: packages/features/login
+
+  register:
+    path: packages/features/register
+
+  main:
+    path: packages/features/main
+
+  splash:
+    path: packages/features/splash
 
   utils:
     path: packages/core/utils
@@ -30,6 +39,8 @@ dependencies:
   yaml_edit: ^2.2.0
   melos: ^6.3.2
   go_router: ^15.1.2
+  google_fonts: ^6.2.1
+  flutter_native_splash: ^2.4.6
 
 dev_dependencies:
   bloc_test: 9.1.7

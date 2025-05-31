@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example.verygoodcore.monorepo" "\0"
-            VALUE "FileDescription", "monorepo" "\0"
+            VALUE "CompanyName", "com.example.verygoodcore.rose_physio" "\0"
+            VALUE "FileDescription", "rose_physio" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "monorepo" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.example.verygoodcore.monorepo. All rights reserved." "\0"
-            VALUE "OriginalFilename", "monorepo.exe" "\0"
-            VALUE "ProductName", "Monorepo" "\0"
+            VALUE "InternalName", "rose_physio" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.example.verygoodcore.rose_physio. All rights reserved." "\0"
+            VALUE "OriginalFilename", "rose_physio.exe" "\0"
+            VALUE "ProductName", "rose_physio" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

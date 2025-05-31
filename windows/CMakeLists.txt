@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(monorepo LANGUAGES CXX)
+project(rose_physio LANGUAGES CXX)
 
-set(BINARY_NAME "monorepo")
+set(BINARY_NAME "rose_physio")
 
 cmake_policy(SET CMP0063 NEW)
 

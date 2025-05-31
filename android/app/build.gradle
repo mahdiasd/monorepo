@@ -1,3 +1,5 @@
+package android.app
+
 plugins {
     id "com.android.application"
     id "kotlin-android"
@@ -29,7 +31,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.example.verygoodcore.monorepo"
+    namespace "com.example.verygoodcore.rose_physio"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -48,7 +50,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.verygoodcore.monorepo"
+        applicationId "com.example.verygoodcore.rose_physio"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
@@ -80,17 +82,17 @@ android {
         production {
             dimension "default"
             applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Monorepo"]
+            manifestPlaceholders = [appName: "rose_physio"]
         }
         staging {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Monorepo"]
+            manifestPlaceholders = [appName: "[STG] rose_physio"]
         }
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Monorepo"]
+            manifestPlaceholders = [appName: "[DEV] rose_physio"]
         }
     }
 

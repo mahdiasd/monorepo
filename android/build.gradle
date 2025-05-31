@@ -1,3 +1,5 @@
+package android
+
 allprojects {
     repositories {
         google()

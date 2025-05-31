@@ -1,4 +1,4 @@
-name: monorepo
+name: rose_physio
 
 concurrency:
   group: $-$

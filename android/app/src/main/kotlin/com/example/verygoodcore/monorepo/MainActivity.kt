@@ -1,4 +1,4 @@
-package com.example.verygoodcore.monorepo
+package android.app.src.main.kotlin.com.example.verygoodcore.monorepo
 
 import io.flutter.embedding.android.FlutterActivity
 

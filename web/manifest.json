@@ -1,6 +1,6 @@
 {
-    "name": "Monorepo",
-    "short_name": "Monorepo",
+    "name": "rose_physio",
+    "short_name": "rose_physio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
